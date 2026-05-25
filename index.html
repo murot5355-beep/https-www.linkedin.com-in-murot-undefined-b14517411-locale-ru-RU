@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matematikada xalqaro baholash tizimlari | Iqtisodiyot va pedagogika universiteti</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #f8fafc; color: #1e293b; line-height: 1.6; }
+        .header { background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%); color: white; padding: 1rem 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo h1 { font-size: 1.3rem; font-weight: 700; }
+        .logo p { font-size: 0.75rem; color: #94a3b8; }
+        .nav { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+        .nav a { color: white; text-decoration: none; font-weight: 500; transition: color 0.3s; cursor: pointer; }
+        .nav a:hover { color: #60a5fa; }
+        .hero { background: linear-gradient(135deg, #1e293b 0%, #2d3a4f 100%); color: white; padding: 3rem 0; text-align: center; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.1rem; max-width: 800px; margin: 0 auto; opacity: 0.9; }
+        .hero-badge { display: inline-block; background: #3b82f6; padding: 0.5rem 1.5rem; border-radius: 50px; margin-top: 1.5rem; font-weight: 600; }
+        .section { padding: 3rem 0; border-bottom: 1px solid #e2e8f0; }
+        .section-title { font-size: 2rem; margin-bottom: 2rem; position: relative; display: inline-block; }
+        .section-title:after { content: ''; position: absolute; bottom: -10px; left: 0; width: 60px; height: 4px; background: #3b82f6; border-radius: 2px; }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .card { background: white; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s; cursor: pointer; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.1); }
+        .card i { font-size: 2rem; color: #3b82f6; margin-bottom: 1rem; }
+        .card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .test-container { background: white; border-radius: 24px; padding: 2rem; box-shadow: 0 8px 30px rgba(0,0,0,0.1); margin-top: 2rem; }
+        .question { margin-bottom: 2rem; }
+        .question-text { font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem; }
+        .options { display: flex; flex-direction: column; gap: 0.75rem; }
+        .option { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 12px; cursor: pointer; transition: all 0.3s; }
+        .option:hover { background: #f1f5f9; border-color: #3b82f6; }
+        .btn { background: #3b82f6; color: white; border: none; padding: 0.75rem 2rem; border-radius: 12px; font-weight: 600; cursor: pointer; margin: 0.5rem; }
+        .btn:hover { background: #2563eb; }
+        .result { margin-top: 1.5rem; padding: 1rem; border-radius: 12px; font-weight: 600; }
+        .footer { background: #0f172a; color: #94a3b8; padding: 2rem 0; text-align: center; }
+        @media (max-width: 768px) {
+            .header-content { flex-direction: column; gap: 1rem; }
+            .hero h1 { font-size: 1.8rem; }
+            .container { padding: 0 1rem; }
+        }
+        .contact-info { background: #f1f5f9; padding: 1.5rem; border-radius: 20px; margin-top: 1rem; }
+        .contact-info i { width: 30px; color: #3b82f6; }
+        .resource-list li { margin-bottom: 0.75rem; list-style: none; }
+        .resource-list a { color: #3b82f6; text-decoration: none; font-weight: 500; }
+        .resource-list a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <h1>📐 Matematikada xalqaro baholash tizimlari</h1>
+                <p>Iqtisodiyot va pedagogika universiteti</p>
+            </div>
+            <div class="nav">
+                <a onclick="showSection('home')">Bosh sahifa</a>
+                <a onclick="showSection('syllabus')">Fan dasturi</a>
+                <a onclick="showSection('lectures')">Ma'ruzalar</a>
+                <a onclick="showSection('practical')">Amaliy mashg'ulotlar</a>
+                <a onclick="showSection('tests')">Testlar</a>
+                <a onclick="showSection('resources')">Resurslar</a>
+                <a onclick="showSection('contact')">Kontakt</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<main id="main-content">
+    <div id="home-section">
+        <div class="hero">
+            <div class="container">
+                <h1>📊 Xalqaro baholash dasturlari bo‘yicha zamonaviy ta’lim</h1>
+                <p>PISA, TIMSS, PIRLS, TALIS, EGMA, EGRA – matematik savodxonlikni rivojlantirishning global standartlari</p>
+                <div class="hero-badge"><i class="fas fa-chalkboard-teacher"></i> Mas’ul o‘qituvchi: dotsent X.A.Raximov</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="cards-grid">
+                <div class="card" onclick="showSection('syllabus')"><i class="fas fa-book-open"></i><h3>Fan dasturi</h3><p>Maqsad, vazifalar, kompetensiyalar</p></div>
+                <div class="card" onclick="showSection('lectures')"><i class="fas fa-chalkboard"></i><h3>15 ta ma'ruza</h3><p>PISA, TIMSS, TALIS, EGMA, EGRA</p></div>
+                <div class="card" onclick="showSection('practical')"><i class="fas fa-tasks"></i><h3>Amaliy mashg'ulotlar</h3><p>Mashq daftarlari, TIMSS & PISA topshiriqlari</p></div>
+                <div class="card" onclick="showSection('tests')"><i class="fas fa-pen-square"></i><h3>Test tizimi</h3><p>150+ savol, onlayn baholash</p></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="syllabus-section" style="display:none">
+        <div class="container section">
+            <h2 class="section-title">📖 Fan dasturi</h2>
+            <div class="test-container">
+                <h3>🎯 Maqsad</h3>
+                <p>Talabalarni xalqaro baholash dasturlarining nazariy, metodik va amaliy asoslari bilan tanishtirish.</p>
+                <h3>✅ Vazifalar</h3>
+                <ul><li>PISA, TIMSS, PIRLS, TALIS dasturlarini o‘rganish</li><li>Baholash metodologiyasi, kompetensiyaviy yondashuv</li><li>O‘zbekiston ta’lim tizimida xalqaro baholash natijalaridan foydalanish</li><li>Diagnostika, monitoring va test topshiriqlarini tahlil qilish</li></ul>
+                <h3>📚 Asosiy adabiyotlar</h3>
+                <ul><li>A.A.Ismailov va b. Xalqaro tadqiqotlarda matematik savodxonlikni baholash, 2019</li><li>Mullis, TIMSS 2019 Assessment Frameworks</li><li>OECD PISA 2012 Assessment and Analytical Framework</li><li>O‘zbekiston Respublikasi Vazirlar Mahkamasining 997-son qarori</li><li>O‘zbekiston Respublikasi Prezidentining PF-5712-son Farmoni</li></ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="lectures-section" style="display:none">
+        <div class="container section">
+            <h2 class="section-title">📚 Ma'ruzalar (15 ta)</h2>
+            <div class="cards-grid">
+                <div class="card"><i class="fas fa-globe"></i><h3>1. Xalqaro baholash dasturlari</h3><p>997-son qaror, huquqiy asoslar</p></div>
+                <div class="card"><i class="fas fa-chart-line"></i><h3>2. TIMSS dasturi</h3><p>Mazmun va o‘tkazilish tartibi</p></div>
+                <div class="card"><i class="fas fa-book-reader"></i><h3>3. PIRLS dasturi</h3><p>Boshlang‘ich sinf o‘qish savodxonligi</p></div>
+                <div class="card"><i class="fas fa-brain"></i><h3>4. PISA dasturi</h3><p>Funksional savodxonlik</p></div>
+                <div class="card"><i class="fas fa-chalkboard-teacher"></i><h3>5. TALIS dasturi</h3><p>O‘qituvchilar faoliyatini o‘rganish</p></div>
+                <div class="card"><i class="fas fa-calculator"></i><h3>6. EGMA dasturi</h3><p>Boshlang‘ich matematika</p></div>
+                <div class="card"><i class="fas fa-language"></i><h3>7. EGRA dasturi</h3><p>Boshlang‘ich o‘qish ko‘nikmasi</p></div>
+                <div class="card"><i class="fas fa-gamepad"></i><h3>8. Matematik o‘yinlar</h3><p>Savodxonlikni rivojlantirish</p></div>
+                <div class="card"><i class="fas fa-balance-scale"></i><h3>9. PISA va TIMSS mezonlari</h3><p>Baholash darajalari</p></div>
+                <div class="card"><i class="fas fa-chart-pie"></i><h3>10. PISA mazmun sohalari</h3><p>Miqdor, fazo, o‘zgarish</p></div>
+                <div class="card"><i class="fas fa-shapes"></i><h3>11. TIMSS mazmun sohalari</h3><p>Sonlar, algebra, geometriya</p></div>
+                <div class="card"><i class="fas fa-lightbulb"></i><h3>12. PISA aqliy faoliyat</h3><p>Formulate–Employ–Interpret</p></div>
+                <div class="card"><i class="fas fa-link"></i><h3>13. TIMSS modelling cycle</h3><p>Mulohaza va muammo hal qilish</p></div>
+                <div class="card"><i class="fas fa-microchip"></i><h3>14. TIMSS kognitiv darajalar</h3><p>Knowing, Applying, Reasoning</p></div>
+                <div class="card"><i class="fas fa-laptop-code"></i><h3>15. AKT va baholash</h3><p>Raqamli texnologiyalar</p></div>
+            </div>
+            <p style="margin-top:2rem; text-align:center; background:#e2e8f0; padding:1rem; border-radius:12px"><i class="fas fa-download"></i> Barcha ma'ruza matnlari PDF formatda mavjud. Yuklab olish uchun kafedraga murojaat qiling.</p>
+        </div>
+    </div>
+
+    <div id="practical-section" style="display:none">
+        <div class="container section">
+            <h2 class="section-title">✍️ Amaliy mashg‘ulotlar</h2>
+            <div class="cards-grid">
+                <div class="card"><h3>1. TIMSS "Miqdor" topshiriqlari</h3></div>
+                <div class="card"><h3>2. TIMSS "Fazo va shakl"</h3></div>
+                <div class="card"><h3>3. TIMSS "O‘zgarish va bog‘lanishlar"</h3></div>
+                <div class="card"><h3>4. TIMSS "Ma’lumotlar va ehtimollik"</h3></div>
+                <div class="card"><h3>5. TIMSS "Son" mazmun sohasi</h3></div>
+                <div class="card"><h3>6. TIMSS "Geometrik shakllar va o‘lchashlar"</h3></div>
+                <div class="card"><h3>7. Mashq daftari №1 tahlili</h3></div>
+                <div class="card"><h3>8. Mashq daftari №2 tahlili</h3></div>
+                <div class="card"><h3>9. PISA topshiriqlari tahlili</h3></div>
+                <div class="card"><h3>10. PIRLS, TIMSS, PISA treninglar</h3></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tests-section" style="display:none">
+        <div class="container section">
+            <h2 class="section-title">📝 Onlayn test tizimi</h2>
+            <div class="test-container">
+                <div id="question-container"></div>
+                <div id="test-controls"><button class="btn" onclick="prevQuestion()">⬅ Oldingi</button><button class="btn" onclick="nextQuestion()">Keyingi ➡</button><button class="btn" onclick="submitTest()" style="background:#10b981">✅ Yakunlash</button></div>
+                <div id="test-result" class="result"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="resources-section" style="display:none">
+        <div class="container section">
+            <h2 class="section-title">🔗 Foydali resurslar</h2>
+            <div class="test-container">
+                <ul class="resource-list" style="font-size:1.1rem; line-height:2.5">
+                    <li><i class="fas fa-external-link-alt"></i> <a href="http://markaz.tdi.uz" target="_blank">Ta’lim sifatini baholash bo‘yicha Milliy markaz</a></li>
+                    <li><i class="fas fa-external-link-alt"></i> <a href="https://www.oecd.org/pisa/" target="_blank">OECD PISA rasmiy sayti</a></li>
+                    <li><i class="fas fa-external-link-alt"></i> <a href="https://timssandpirls.bc.edu/" target="_blank">TIMSS & PIRLS International Study Center</a></li>
+                    <li><i class="fas fa-external-link-alt"></i> <a href="https://nces.ed.gov/timss/" target="_blank">NCES TIMSS</a></li>
+                    <li><i class="fas fa-external-link-alt"></i> <a href="https://uzedu.uz" target="_blank">O‘zbekiston Maktabgacha va maktab ta’limi vazirligi</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact-section" style="display:none">
+        <div class="container section">
+            <h2 class="section-title">📞 Kontakt</h2>
+            <div class="test-container contact-info">
+                <p><i class="fas fa-user-graduate"></i> <strong>Mas’ul o‘qituvchi:</strong> dotsent Xolmurot Abdullayevich Raximov</p>
+                <p><i class="fas fa-phone-alt"></i> <strong>Telefon:</strong> <a href="tel:+99897911535" style="color:#3b82f6; text-decoration:none">+998 97 911 53 35</a></p>
+                <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:murod55@gmail.com" style="color:#3b82f6; text-decoration:none">murod55@gmail.com</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Manzil:</strong> Iqtisodiyot va pedagogika universiteti, Matematika kafedrasi, Qarshi shahri</p>
+                <hr style="margin:1rem 0">
+                <p><i class="fas fa-clock"></i> <strong>Qabul vaqtlari:</strong> Dushanba–Juma, 14:00 – 16:00</p>
+                <p><i class="fas fa-building"></i> <strong>Kafedra:</strong> Matematika kafedrasi, 3-qavat, 305-xona</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="footer">
+    <div class="container">
+        <p>© 2025 Iqtisodiyot va pedagogika universiteti | Matematikada xalqaro baholash tizimlari</p>
+        <p>📞 +998 97 911 53 35 | ✉️ murod55@gmail.com | Mas’ul o‘qituvchi: dotsent X.A.Raximov</p>
+    </div>
+</div>
+
+<script>
+    const testQuestions = [
+        { text: "PF-5538-son Farmonining asosiy maqsadi nimadan iborat?", options: ["Xalqaro baholashni to'xtatish", "O'quv dasturlarini qisqartirish", "Xalq ta'limi boshqaruv tizimini takomillashtirish", "Faqat o'qituvchilar malakasini oshirish"], correct: 2 },
+        { text: "TIMSS dasturi qaysi tashkilot tomonidan o'tkaziladi?", options: ["UNESCO", "UNICEF", "OECD", "IEA"], correct: 3 },
+        { text: "PIRLS tadqiqoti qaysi yoshdagi o'quvchilarni baholaydi?", options: ["2-sinf", "4-sinf", "6-sinf", "9-sinf"], correct: 1 },
+        { text: "PISA dasturini qaysi tashkilot muvofiqlashtiradi?", options: ["UNESCO", "UNICEF", "OECD", "IEA"], correct: 2 },
+        { text: "TALIS dasturi asosan kimlarni o'rganadi?", options: ["15 yoshli o'quvchilar", "Ota-onalar", "O'qituvchilar va maktab direktorlari", "Oliy ta'lim talabalari"], correct: 2 },
+        { text: "EGMA qaysi sohani baholaydi?", options: ["O'qish savodxonligi", "Boshlang'ich matematik ko'nikmalar", "Fizika", "Kimyo"], correct: 1 },
+        { text: "EGRA dasturining asosiy maqsadi?", options: ["O'quvchilarni saralash", "O'qish savodxonligini aniqlash", "Oliy ta'limga tayyorlash", "Maktablarni baholash"], correct: 1 },
+        { text: "TIMSS tadqiqoti necha yilda bir marta o'tkaziladi?", options: ["Har yili", "Har 2 yilda", "Har 4 yilda", "Har 5 yilda"], correct: 2 },
+        { text: "PISA matematik modelida birinchi bosqich qanday ataladi?", options: ["Employ", "Interpret", "Formulate", "Evaluate"], correct: 2 },
+        { text: "TIMSS kognitiv darajalari nechta?", options: ["2", "3", "4", "5"], correct: 1 },
+        { text: "Matematik savodxonlik nimani anglatadi?", options: ["Formulalarni yodlash", "Hisoblash tezligi", "Bilimlarni hayotda qo'llash", "Geometrik shakllarni chizish"], correct: 2 },
+        { text: "PISA 2022 da qaysi yo'nalish asosiy bo'lgan?", options: ["O'qish", "Matematika", "Tabiiy fanlar", "Kreativ fikrlash"], correct: 1 },
+        { text: "EGRA baholash jarayoni qanday shaklda o'tkaziladi?", options: ["Guruhli test", "Individual tarzda", "Faqat yozma", "Onlayn sinov"], correct: 1 },
+        { text: "997-son qaror asosida qaysi tashkilot tashkil etildi?", options: ["Xalq ta'limi vazirligi", "Pedagoglar malakasini oshirish instituti", "Ta'lim sifatini baholash bo'yicha Milliy markaz", "Statistika qo'mitasi"], correct: 2 },
+        { text: "PF-5712-son Farmonda PISA bo'yicha qanday maqsad belgilangan?", options: ["Ishtirok etmaslik", "2050-yilgacha TOP-50", "2030-yilgacha TOP-30", "Har yili test topshirish"], correct: 2 },
+        { text: "TIMSS dasturida o'quvchilar qaysi sinflardan tanlanadi?", options: ["1 va 2-sinf", "4 va 8-sinf", "5 va 9-sinf", "6 va 10-sinf"], correct: 1 },
+        { text: "PIRLS tadqiqoti odatda necha yilda bir marta o'tkaziladi?", options: ["2 yilda", "3 yilda", "5 yilda", "10 yilda"], correct: 2 },
+        { text: "TALIS dasturi qaysi yildan boshlab amalga oshirilmoqda?", options: ["2000", "2005", "2008", "2010"], correct: 2 },
+        { text: "EGMA dasturi qaysi tashkilot tomonidan ishlab chiqilgan?", options: ["UNESCO", "OECD", "RTI International", "IEA"], correct: 2 },
+        { text: "EGRA dasturida matnni o'qish tezligi qanday o'lchanadi?", options: ["Paragraflar soni", "O'qilgan betlar soni", "Vaqt ichida to'g'ri o'qilgan so'zlar soni", "Imlo xatolari"], correct: 2 }
+    ];
+    let currentIndex = 0, answers = new Array(testQuestions.length).fill(null), submitted = false;
+    function renderQuestion() {
+        if (submitted) return;
+        const q = testQuestions[currentIndex];
+        let html = `<div class="question"><div class="question-text">${currentIndex+1}. ${q.text}</div><div class="options">`;
+        q.options.forEach((opt, idx) => { html += `<label class="option"><input type="radio" name="q" value="${idx}" ${answers[currentIndex]===idx ? 'checked':''}> ${opt}</label>`; });
+        html += `</div></div>`;
+        document.getElementById('question-container').innerHTML = html;
+        document.querySelectorAll('input[name="q"]').forEach(r => r.addEventListener('change', (e) => answers[currentIndex] = parseInt(e.target.value)));
+    }
+    function nextQuestion() { if (currentIndex < testQuestions.length-1) { currentIndex++; renderQuestion(); } }
+    function prevQuestion() { if (currentIndex > 0) { currentIndex--; renderQuestion(); } }
+    function submitTest() {
+        let correct = 0;
+        for (let i=0; i<testQuestions.length; i++) if (answers[i] === testQuestions[i].correct) correct++;
+        let percent = Math.round(correct/testQuestions.length*100);
+        let msg = percent>=80 ? "🎉 A'lo daraja! Siz xalqaro baholash tizimlarini mukammal bilasiz." : (percent>=60 ? "👍 Yaxshi! Amaliy topshiriqlarni ko'proq bajaring." : "📚 Mavzularni qayta o'rganing va testlarni takrorlang.");
+        document.getElementById('test-result').innerHTML = `<strong>✅ Natijangiz: ${correct}/${testQuestions.length} (${percent}%)</strong><br>${msg}<br><br><button class="btn" onclick="resetTest()" style="background:#3b82f6">🔄 Testni qayta boshlash</button>`;
+        document.getElementById('question-container').innerHTML = "<p style='text-align:center; padding:2rem;'><i class='fas fa-check-circle' style='font-size:3rem; color:#10b981'></i><br>Test yakunlandi. Natijangiz yuqorida.</p>";
+        document.getElementById('test-controls').style.display = 'none';
+        submitted = true;
+    }
+    function resetTest() { answers = new Array(testQuestions.length).fill(null); currentIndex=0; submitted=false; document.getElementById('test-controls').style.display='block'; document.getElementById('test-result').innerHTML=''; renderQuestion(); }
+    function showSection(section) {
+        document.getElementById('home-section').style.display='none'; document.getElementById('syllabus-section').style.display='none'; document.getElementById('lectures-section').style.display='none';
+        document.getElementById('practical-section').style.display='none'; document.getElementById('tests-section').style.display='none'; document.getElementById('resources-section').style.display='none'; document.getElementById('contact-section').style.display='none';
+        if (section==='home') document.getElementById('home-section').style.display='block';
+        if (section==='syllabus') document.getElementById('syllabus-section').style.display='block';
+        if (section==='lectures') document.getElementById('lectures-section').style.display='block';
+        if (section==='practical') document.getElementById('practical-section').style.display='block';
+        if (section==='tests') { document.getElementById('tests-section').style.display='block'; resetTest(); }
+        if (section==='resources') document.getElementById('resources-section').style.display='block';
+        if (section==='contact') document.getElementById('contact-section').style.display='block';
+        window.scrollTo({top:0});
+    }
+    window.onload = () => resetTest();
+</script>
+</body>
+</html>
